@@ -13,7 +13,7 @@ pipeline {
   stages {
     stage('Code Checkout') {
       steps {
-          checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '93ed58e0-e805-4a6d-a834-0af615023c49', url: 'git@github.com:practicaljenkins/python-project.git']]])
+          checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git', url: 'git@github.com:JaiTrieTree/PythonJenkins.git']]])
       }
     }
     stage('Build') {
